@@ -1,0 +1,84 @@
+{% extends "dat_base.html" %} {%load static%} {%block title %} GMaps | Data
+analysis Tool{% endblock %} {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+<script src="{% static 'plugins/bs-custom-file-input/bs-custom-file-input.min.js' %}"></script>
+<body>
+  <div class="container mt-3 justify-content-center ">
+    <div class="col-12 bg-gray disabled color-palette">
+     
+      <h1 class="fas fa-chart-bar d-flex float-right text-indigo color-palette"></h1>
+      <h1 class="fas fas fa-chart-pie float-right mx-2 text-info color-palette"></h1>
+
+      <h1 class="fas fa-chart-line d-flex float-right text-success  color-palette"></h1>
+
+    </div>
+    <h1>Data Analysis Tool</h1>
+    <form >
+      <div class="col-12">
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <div class="input-group">
+            <div class="custom-file">
+              <input
+                type="file"
+                class="custom-file-input"
+                id="exampleInputFile"
+                accept=".xlsx"
+                REQUIRED
+              />
+              <label class="custom-file-label" for="exampleInputFile"
+                >Choose file</label
+              >
+            </div>
+            
+          </div>
+        </div>
+ 
+      </div>
+
+      <div class="col-12">
+        <button type="button" class="btn swalDefaultSuccess   text-uppercase rounded-pill btn-primary col-12" >
+            Upload
+            </button>      </div>
+      <a href="#" class="mx-2 my-3" style="visibility: visible;">
+        download report.html
+    </a>
+      <div>
+    
+    </form>
+    
+          
+  </div>
+
+  <script>
+    $(function () {
+    
+     
+      bsCustomFileInput.init();
+    });
+    </script>
+    <script>
+        $(function() {
+          var Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+      
+          $('.swalDefaultSuccess').click(function() {
+            Toast.fire({
+              icon: 'info',
+              title: 'File is generating'
+            });
+            Toast.fire({
+              icon: 'success',
+              title: 'file will start to download shortly'
+            })
+          });
+        
+        
+        });
+      </script>
+</body>
+{% endblock %}

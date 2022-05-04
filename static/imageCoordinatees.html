@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+
+</head>
+
+<body>
+    <img id="img" width="300px" height="300px" src="https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/20/37/2037269_v32.jpeg" />
+
+<p id="img_coordinate"></p>
+</body>
+</html>
+
+<script>
+    $(document).ready(function () {
+    $("#img").on("click", function (event) {
+        console.log("X Coordinate: " + (event.pageX - this.offsetLeft) + "<br/> Y Coordinate: " + (event.pageY - this.offsetTop))    
+        $('#img_coordinate').html("X Coordinate: " + (event.pageX - this.offsetLeft) + "<br/> Y Coordinate: " + (event.pageY - this.offsetTop));
+    });
+});
+</script>

@@ -1,0 +1,332 @@
+{% extends "base.html" %} {%load static%} {% block content %}
+<div class="card-body">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-1">
+        <div class="col-sm-6">
+          <h1 class="m-0">Solapur Airport (SSE, VASL)</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item">
+              <a
+                href="https://github.com/nagdatt/imageProcessingOnSatelliteImages"
+                target="_blank"
+                >Open Source Algorithm</a
+              >
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="card card-primary card-outline" style="min-height: 439px">
+          <div class="card-body">
+            <img
+              src=" {% static 'geo2.png' %}"
+              id="img"
+              class="col-12"
+              height="400px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card card-primary card-outline" style="min-height: 439px">
+          <div class="card-header">
+            <h5 class="m-0"><b>Featured</b></h5>
+          </div>
+          <div class="card-body p-1">
+            <table class="table table-striped">
+              <tbody>
+                <td>
+                  <b>
+                    <i>Tags:</i>
+                  </b>
+
+                  <span class="badge bg-secondary ml-1 p-2 rounded-pill"
+                    >#green_place</span
+                  >
+                  <span class="badge bg-secondary ml-1 p-2 rounded-pill"
+                    >#worldclass</span
+                  >
+                  <span class="badge bg-secondary ml-1 p-2 rounded-pill mt-1"
+                    >#rushed_area</span
+                  >
+                  <span class="badge bg-secondary ml-1 p-2 rounded-pill mt-1"
+                    >#rushed_area</span
+                  >
+                  <span class="badge bg-secondary ml-1 p-2 rounded-pill mt-1"
+                    >#solapur</span
+                  >
+                </td>
+
+                <tr>
+                  <td>
+                    <b>
+                      <i>Feild Elevation:</i>
+                    </b>
+                    1500 / 1800 sq. mtr.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      <i>Coordinates: </i>
+                    </b>
+                    17.628000,75.934799
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      <i>Facility type: </i>
+                    </b>
+                    medium
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <b>
+                        <i>Last Updated: </i>
+                      </b>
+                      <p class="text-primary ml-1">2022-4-22 21:27</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>
+                      <i>Ratings: </i>
+                    </b>
+                    4.3
+                    <i class="fa fa-duotone fa-star" style="color: #ffd700"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %} From Here Stats starts {% endcomment %}
+ {% comment %}
+  Greenary 
+{% endcomment %}
+<div  class="card-body my-0 col-12">
+  <div class="card card-success " data-card-widget="collapse" >
+    <div class="card-header">
+    <h3 class="card-title col-9">
+      <i class="fas fa-tree"></i>
+      Greenary percentage / Open Area
+      
+      <i class="float-right"><b> Current ratio : 37/60 %</b></i>
+      
+    </h3>
+   
+    <div class="card-tools">
+    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+    <i class="fas fa-minus"></i>
+    </button>
+    <button type="button" class="btn btn-tool" data-card-widget="remove">
+    <i class="fas fa-times"></i>
+    </button>
+    </div>
+    </div>
+    <div class="card-body">
+    <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+    <canvas id="lineChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 382px;" width="382" height="250" class="chartjs-render-monitor"></canvas>
+    </div>
+    </div>
+    
+    </div>
+</div>
+
+{% comment %} Location OverView {% endcomment %}
+<div class="card mx-4">
+  <div class="card-header border-0">
+  <h3 class="card-title">Location Overview (Current version)</h3>
+  
+  </div>
+  <div class="card-body">
+  <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+  <p class="text-success text-xl">
+  <i class="ion ion-home"></i>
+  </p>
+  <p class="d-flex flex-column text-right">
+   <span class="font-weight-bold">
+  <i class="ion ion-android-arrow-up text-success"></i> 366
+  </span>
+  <span class="text-muted text-uppercase">house counts</span>
+  </p>
+  </div>
+  
+  <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+  <p class="text-warning text-xl">
+  <i class="fas fa-water text-info"></i>
+  </p>
+  <p class="d-flex flex-column text-right">
+  <span class="font-weight-bold">
+  <i class="ion ion-android-arrow-up text-success"></i> 0.8%
+  </span>
+  <span class="text-muted text-uppercase">water percentage</span>
+  </p>
+  </div>
+  
+  <div class="d-flex justify-content-between align-items-center mb-0">
+  <p class="text-danger text-xl">
+  <i class="ion ion-ios-football"></i>
+  </p>
+  <p class="d-flex flex-column text-right">
+  <span class="font-weight-bold">
+  <i class="ion ion-android-arrow-down text-danger"></i> 3
+  </span>
+  <span class="text-muted text-uppercase">Grounds count</span>
+  </p>
+  </div>
+  <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+    <p class="text-warning text-xl">
+    <i class="fas fa-road text-secondary"></i>
+    </p>
+    <p class="d-flex flex-column text-right">
+    <span class="font-weight-bold">
+    <i class="text-success"> YES</i>
+    </span>
+    <span class="text-muted text-uppercase">Highway road</span>
+    </p>
+    </div>
+  
+  </div>
+  </div>
+<script>
+  $(document).ready(function () {
+    $("#img").on("click", function (event) {
+      console.log(
+        "X Coordinate: " +
+          (event.pageX - this.offsetLeft) +
+          "<br/> Y Coordinate: " +
+          (event.pageY - this.offsetTop)
+      );
+      //  $('#img_coordinate').html("X Coordinate: " + (event.pageX - this.offsetLeft) + "<br/> Y Coordinate: " + (event.pageY - this.offsetTop));
+    });
+  });
+  
+    $(function () {
+      /* ChartJS
+       * -------
+       * Here we will create a few charts using ChartJS
+       */
+  
+      
+  
+      //-------------
+      //- LINE CHART -
+      //--------------
+      var areaChartData = {
+        labels  :['version_1 d1', 'version_1 d2', 'version_1 d3', 'version_1 d4', 'version_1 d5', 'version_1 d6', 'version_1 d7',"version_8 (Current)"],
+        datasets: [
+          {
+            label               : 'Greenary percentage',
+            backgroundColor     : '#004D00',
+            borderColor         : '#28A745',
+            pointRadius          : true,
+            
+            pointColor          : '#28A745',
+            pointStrokeColor    : '#28A745',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke: '#28A745',
+            data                :  {{data.0}}
+          },
+          {
+            label               : 'Open Area',
+            backgroundColor     : 'rgba(60,141,188,0.9)',
+            borderColor         : 'rgba(60,141,188,0.8)',
+            pointRadius         : true,
+            pointColor          : '#3b8bbb',
+            pointStrokeColor    : '#c1c7d1',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke:  'rgba(60,141,188,1)',
+            data                :{{data.1}}
+          },
+        ]
+      }
+    var areaChartOptions = {
+      maintainAspectRatio : false,
+      responsive : true,
+      legend: {
+        display: true
+      },
+      scales: {
+        xAxes: [{
+          gridLines : {
+            display : true,
+          }
+        }],
+        yAxes: [{
+          gridLines : {
+            display : true,
+          }
+        }]
+      }
+    }
+      var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
+      var lineChartOptions = $.extend(true, {}, areaChartOptions)
+      var lineChartData = $.extend(true, {}, areaChartData)
+      lineChartData.datasets[0].fill = false;
+      lineChartData.datasets[1].fill = false;
+      lineChartOptions.datasetFill = false
+  
+      var lineChart = new Chart(lineChartCanvas, {
+        type: 'line',
+        data: lineChartData,
+        options: lineChartOptions
+      })
+  
+      //-------------
+      //- DONUT CHART -
+      //-------------
+      // Get context with jQuery - using jQuery's .get() method.
+      var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+      var donutData        = {
+        labels: [
+            'Chrome',
+            'IE',
+            'FireFox',
+            'Safari',
+            'Opera',
+            'Navigator',
+        ],
+        datasets: [
+          {
+            data: [700,500,400,600,300,100],
+            backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+          }
+        ]
+      }
+      var donutOptions     = {
+        maintainAspectRatio : false,
+        responsive : true,
+      }
+      //Create pie or douhnut chart
+      // You can switch between pie and douhnut using the method below.
+      new Chart(donutChartCanvas, {
+        type: 'doughnut',
+        data: donutData,
+        options: donutOptions
+      })
+  
+     
+    })
+  </script>
+  
+</script>
+{% comment %} for greenary percentage {% endcomment %}
+
+{% endblock content %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+ {%load static%} 
+{% block content %}
+<div >
+  <div class="row p-2">
+   {%for data in data %}
+   <div class="col-md-6">
+
+    <div class="card card-widget collapsed-card">
+    <div class="card-header">
+    <div class="user-block">
+    <img class="img-circle" src=" {% static 'dist/img/user1-128x128.jpg ' %}" alt="User Image">
+    <span class="username"><a href="#">{{data.name}}</a></span>
+    <span class="description">Last Updated - {{data.updated_date}}</span>
+    </div>
+    
+    <div class="card-tools">
+    
+    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+    <i class="fas fa-plus"></i>
+    </button>
+ 
+    </div>
+    
+    </div>
+    
+    <div class="card-body">
+    <p>I took this photo this morning. What do you guys think?</p>
+    <button type="button" class="btn btn-default btn-sm"><i class="far fa-thumbs-up"></i> Like</button>
+    <span class="float-right text-muted">{{data.likes}} likes</span>
+    </div>
+    
+    <div class="card-footer card-comments">
+    <div class="card-comment">
+    
+    <div class="comment-text">
+    <span class="username">
+    Maria Gonzales
+    <span class="text-muted float-right">8:03 PM Today</span>
+    </span>
+    It is a long established fact that a reader will be distracted
+    by the readable content of a page when looking at its layout.
+    </div>
+    
+    </div>
+    
+    <div class="card-comment">
+    
+    <div class="comment-text">
+    <span class="username">
+    Luna Stark
+    <span class="text-muted float-right">8:03 PM Today</span>
+    </span>
+    It is a long established fact that a reader will be distracted
+    by the readable content of a page when looking at its layout.
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <div class="card-footer">
+    <form action="#" method="post">
+    
+   
+    </form>
+    </div>
+    
+    </div>
+    
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

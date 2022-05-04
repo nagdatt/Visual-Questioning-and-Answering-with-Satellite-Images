@@ -1,0 +1,226 @@
+{% extends "base.html" %} {%load static%} {% block content %}
+
+<div class="card-body">
+  <div class="card">
+    <div class="card-header border-0">
+      <h3 class="card-title">Complete statistics</h3>
+      <div class="card-tools">
+        <a href="#" class="btn btn-tool btn-sm">
+          <i class="fas fa-download"></i>
+        </a>
+      </div>
+    </div>
+    <div class="card-body table-responsive p-0">
+      <table class="table table-striped table-valign-middle">
+        <thead>
+          <tr>
+            <th>
+                <span class="ion ion-location"></span>
+                Location</th>
+            <th>
+                <span class="fas fa-globe"></span>
+
+                Parent</th>
+            <th>
+                <span class="fab fa-opencart"></span>
+                Open Area</th>
+            <th>
+                <span class="fas fa-tree"></span>
+                Greenary %</th>
+            <th>
+                <span class="ion ion-ios-football"></span>
+                Grounds</th>
+            <th>  <span class="fas fa-water"></span>
+                Water Percentage</th>
+            <th>
+                <span class="fas fa-road "></span>
+                highway raod</th>
+
+            <th>
+                <span class="fas fa-hashtag "></span>
+                Top tags</th>
+          </tr>
+        </thead>
+        <tbody>
+         {% for data in data%}
+         <tr>
+            <td>Solapur Airport (SSE, VASL)</td>
+            <td>Solapur</td>
+            <td>
+              <small class="text-warning mr-1">
+                <i class="fas fa-arrow-down"></i>
+                12%
+              </small>
+              12,000 
+            </td>
+            <td>
+                <small class="text-warning mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  0.5%
+                </small>
+                123,234 
+              </td>
+              <td>
+                <small class="text-warning mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  0.5%
+                </small>
+                123,234 
+              </td>
+              <td>
+                <small class="text-warning mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  0.5%
+                </small>
+                123,234 
+              </td>
+              <td>
+                <small class="text-warning mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  0.5%
+                </small>
+                123,234 
+              </td>
+              <td>
+                <span class="badge badge-warning right rounded-pill"> #to_mnay_houses </span>
+                <span class="badge badge-info right rounded-pill"> #rivers </span>
+              </td>
+              
+          </tr>
+          <tr>
+            <td>Solapur Airport (SSE, VASL)</td>
+            <td>Solapur</td>
+            <td>
+              <small class="text-warning mr-1">
+                <i class="fas fa-arrow-down"></i>
+                0.5%
+              </small>
+              123,234 
+            </td>
+            <td>
+                <small class="text-success mr-1">
+                  <i class="fas fa-arrow-up"></i>
+                  12%
+                </small>
+                12,000 
+              </td>
+              <td>
+                <small class="text-success mr-1">
+                  <i class="fas fa-arrow-up"></i>
+                  12%
+                </small>
+                12,000 
+              </td>
+              <td>
+                <small class="text-warning mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  12%
+                </small>
+                12,000 
+              </td>
+              <td>
+                <small class="text-success mr-1">
+                  <i class="fas fa-arrow-up"></i>
+                  12%
+                </small>
+                12,000 
+              </td>
+              <td>
+                <span class="badge badge-info right rounded-pill"> #highway_here </span>
+                <span class="badge badge-success right rounded-pill"> #grounds </span>
+              </td>
+          </tr>
+          <tr>
+            <td>Solapur Airport (SSE, VASL)</td>
+            <td>Solapur</td>
+            <td>
+              <small class="text-danger mr-1">
+                <i class="fas fa-arrow-down"></i>
+                3%
+              </small>
+              198
+            </td>
+            <td>
+                <small class="text-success mr-1">
+                  <i class="fas fa-arrow-up"></i>
+                  63%
+                </small>
+                87 
+              </td>
+              <td>
+                <small class="text-info mr-1">
+                  <i class="fas fa-arrow-up"></i>
+                  63%
+                </small>
+                87 
+              </td>
+              <td>
+                <small class="text-success mr-1">
+                  <i class="fas fa-arrow-up"></i>
+                  63%
+                </small>
+                87 
+              </td>
+              <td>
+                <small class="text-success mr-1">
+                  <i class="fas fa-arrow-up"></i>
+                  63%
+                </small>
+                87 
+              </td>
+              <td>
+                <span class="badge badge-warning right rounded-pill"> #dirty </span>
+                <span class="badge badge-danger right rounded-pill"> #rushed_area </span>
+              </td>
+          </tr>
+          <tr>
+            <td>Solapur Airport (SSE, VASL)</td>
+            <td>Solapur</td>
+            <td>
+              <small class="text-success mr-1">
+                <i class="fas fa-arrow-up"></i>
+                63%
+              </small>
+              87 
+            </td>
+            <td>
+                <small class="text-info mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  3%
+                </small>
+                198
+              </td>
+              <td>
+                <small class="text-danger mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  3%
+                </small>
+                198
+              </td>
+              <td>
+                <small class="text-info mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  3%
+                </small>
+                198
+              </td>
+              <td>
+                <small class="text-danger mr-1">
+                  <i class="fas fa-arrow-down"></i>
+                  3%
+                </small>
+                198
+              </td>
+              <td>
+                <span class="badge badge-success right rounded-pill"> #green_place </span>
+                <span class="badge badge-danger right rounded-pill"> #rushed_area </span>
+              </td>
+          </tr>
+         {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
